@@ -7,7 +7,7 @@
  */
 
 require_once(__DIR__."/../model/Administrador.php");
-require_once(__DIR__."../model/Cliente.php");
+require_once(__DIR__."/../model/Cliente.php");
 
 class SessionController {
 
