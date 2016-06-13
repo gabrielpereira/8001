@@ -6,6 +6,8 @@
  * Time: 18:41
  */
 require_once(__DIR__."/../data-access/LocalDAO.php");
+require_once(__DIR__."/../model/Local.php");
+
 
 
 class LocalController{
@@ -28,6 +30,10 @@ class LocalController{
 
     public function getLocaisPor($ordenacao){
         return self::$localDAO->getLocais($ordenacao);
+    }
+    public function inserirLocal($cod, $nome, $cidade, $posicao_global){
+        $local = new Local(array($cod, $nome, $cidade, $posicao_global));
+        self::$localDAO->inserirLocal($local);
     }
 
 }
