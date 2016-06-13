@@ -6,14 +6,20 @@
  * Time: 18:00
  */
 
+
 abstract class DataAccessObject {
     private static $sgbd = "mysql";
     private static $dbhost = "localhost";
     private static $dbname = "8001";
 
     public function query($query){
+        if(isset($_SESSION["cpf"])){
+            $_POST["cpf"] = $_SESSION["cpf"];
+            $_POST["senha"] = $_SESSION["senha"];
+        }
+
         $dbuser = $_POST["cpf"];
-        $dbpass = md5($_POST['senha']);
+        $dbpass = $_POST['senha'];
 
         if(DataAccessObject::$sgbd=="mysql"){
             try {

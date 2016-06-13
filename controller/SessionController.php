@@ -29,7 +29,9 @@ class SessionController {
         session_start();
         $_SESSION["papel"] = $papel;
         $_SESSION["nome"] = $usuario->nome;
+        $_SESSION["senha"] = $usuario->senha;
         $_SESSION["cpf"] = $usuario->cpf;
+        $_SESSION["last-access"] = time();
     }
 
     public static function encerrarSessao(){

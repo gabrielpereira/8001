@@ -31,10 +31,10 @@ class AdministradorController {
         return self::$administradorDAO->getAdministradores();
     }
 
-    public function validaAdministrador($cpf, $senha){
+    public function validaAdministrador($cpf, $hashSenha){
         $administrador = self::$administradorDAO->getAdministrador($cpf);
         if($administrador == NULL) return FALSE;
-        if($administrador->senha != MD5($senha)){
+        if($administrador->senha != ($hashSenha)){
             return array("erro" => "Falha de autenticação.");
         }else{
             SessionController::iniciaSessao("Administrador",$administrador);
