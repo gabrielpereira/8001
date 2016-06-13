@@ -6,6 +6,7 @@ require_once("../controller/ClienteController.php");
 $cpf = $_POST['cpf'];
 $hashSenha = MD5($_POST['senha']);
 $papel = $_POST['papel'];
+$_POST['hashSenha']=$hashSenha;
 
 if($papel == "Administrador"){
     $adminController = AdministradorController::getInstance();

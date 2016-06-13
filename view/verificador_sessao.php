@@ -22,7 +22,6 @@ function verificaCredenciais($papel_exigido){
                 return FALSE;
         }
     }else{
-        print_r($_SESSION); exit;
         header('Location: /8001/view/template/production/login.html');
         exit;
     }

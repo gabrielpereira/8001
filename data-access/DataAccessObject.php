@@ -15,11 +15,11 @@ abstract class DataAccessObject {
     public function query($query){
         if(isset($_SESSION["cpf"])){
             $_POST["cpf"] = $_SESSION["cpf"];
-            $_POST["senha"] = $_SESSION["senha"];
+            $_POST["hashSenha"] = $_SESSION["hashSenha"];
         }
 
         $dbuser = $_POST["cpf"];
-        $dbpass = $_POST['senha'];
+        $dbpass = $_POST["hashSenha"];
 
         if(DataAccessObject::$sgbd=="mysql"){
             try {
