@@ -132,7 +132,7 @@ verificaCredenciais("Administrador");
                   <li><a><i class="fa fa-map-marker"></i>Locais <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="locais.php">Editar Locais</a></li>
-                            <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                            <li><a href="inserir_local.php">Inserir Local</a></li>
                         </ul>
                   </li>
                 </ul>
