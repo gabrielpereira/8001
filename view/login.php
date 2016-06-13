@@ -1,7 +1,7 @@
 <?php
 
-require_once("/controller/AdministradorController.php");
-require_once("/controller/ClienteController.php");
+require_once("../controller/AdministradorController.php");
+require_once("../controller/ClienteController.php");
 
 $cpf = $_POST['cpf'];
 $senha = $_POST['senha'];
@@ -9,8 +9,7 @@ $papel = $_POST['papel'];
 
 if($papel == "Administrador"){
     $adminController = AdministradorController::getInstance();
-    $validado = $adminController->validaAdministrador($cpf,$senha);
-    echo $validado;
+    echo json_encode($adminController->validaAdministrador($cpf,$senha));
 }
 
 /*$adminControl = AdministradorController::getInstance();

@@ -19,10 +19,34 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
 
+      <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+      <script src="js/login.js"></script>
+
       <script>
-
-
+          //$(function(){$(".alert-info").fadeIn();});
       </script>
+
+      <style>
+          .notification-container{
+              width:350px;
+              height:35px;
+              margin-bottom:5px;
+          }
+          .alert{
+              margin:0 !important;
+              padding: 7px !important;
+              display: none;
+          }
+          .alert-info{
+                background-color: #d9edf7 !important;
+                border-color: #bce8f1 !important;
+                color: #73879C !important;
+
+          }
+          p.change_link{
+              margin: 0;
+          }
+      </style>
 
   </head>
 
@@ -34,29 +58,44 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form id="login-form">
               <h1>Formulário de Login</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Usuário" required="" />
+                <input id="cpf" type="text" class="form-control" placeholder="CPF" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Senha" required="" />
+                <input id="senha" type="password" class="form-control" placeholder="Senha" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Entrar</a>
+                <a class="btn btn-default submit" href="javascript:login('Administrador');">Entrar</a>
                 <a class="reset_pass" href="#">Esqueceu sua senha?</a>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
+                  <div class="notification-container">
+                      <div class="alert alert-success">
+                          <strong>Successo!</strong>
+                      </div>
+
+                      <div class="alert alert-info">
+                          <strong>Autenticando...</strong><span style="margin-left:200px"><img src="images/loading.gif" alt="" height="16px" width="16px"/></span>
+                      </div>
+
+                      <div class="alert alert-warning">
+                          <strong>Warning!</strong> Indicates a warning that might need attention.
+                      </div>
+
+                      <div class="alert alert-danger">
+                          <strong>Falha durante a autenticação.</strong>
+                      </div>
+                  </div>
                 <p class="change_link">Novo no site?
                   <a href="#signup" class="to_register"> Crie sua conta </a>
                 </p>
-
                 <div class="clearfix"></div>
-                <br />
-
+                  <br>
                 <div>
                   <h1><i class="fa fa-bus"></i> Auto Viação 8001</h1>
                   <p>©2016 Todos os direitos reservador. Auto Viação 8001. Termos e privacidade.</p>

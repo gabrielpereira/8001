@@ -1,5 +1,6 @@
 <?php
-require_once("/data-access/AdministradorDAO.php");
+require_once("../data-access/AdministradorDAO.php");
+require_once("SessionController.php");
 /**
  * Created by PhpStorm.
  * User: Renard
@@ -33,7 +34,16 @@ class AdministradorController {
     public function validaAdministrador($cpf, $senha){
         $administrador = self::$administradorDAO->getAdministrador($cpf);
         if($administrador == NULL) return FALSE;
-        return ($administrador->$senha == MD5($senha) ? TRUE : FALSE);
+        if($administrador->senha != MD5($senha)){
+            return array("erro" => "Falha de autenticação.");
+        }else{
+            SessionController::iniciaSessao("Administrador",$administrador);
+            return array("sucesso" => "Usuário carregado com sucesso", "usuario" => $administrador);
+        }
+    }
+
+    public function deslogaAdministrador(){
+        SessionController::encerrarSessao();
     }
 
 

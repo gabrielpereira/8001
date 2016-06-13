@@ -13,11 +13,16 @@ abstract class DataAccessObject {
 
     public function query($query){
         $dbuser = $_POST["cpf"];
-        $dbpass = md5($_POST['pass']);
+        $dbpass = md5($_POST['senha']);
 
         if(DataAccessObject::$sgbd=="mysql"){
-            $pdo = new PDO('mysql:host='.DataAccessObject::$dbhost.';dbname='.DataAccessObject::$dbname,
-                $dbuser, $dbpass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+            try {
+                $pdo = new PDO('mysql:host=' . DataAccessObject::$dbhost . ';dbname=' . DataAccessObject::$dbname,
+                    $dbuser, $dbpass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+            }catch(PDOException $e){
+                echo json_encode(array("erro" => "PDOException", $e->getMessage() => $e->__toString()));
+                exit;
+            }
         }else if(DataAccessObject::$sgbd=="postgres"){
             $pdo = new PDO('pgsql:host='.DataAccessObject::$dbhost.' dbname='.DataAccessObject::$dbname.'user='.$dbuser.'password='.$dbpass);
         }

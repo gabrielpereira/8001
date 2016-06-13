@@ -1,6 +1,6 @@
 <?php
-require_once("/data-access/DataAccessObject.php");
-require_once("/model/Administrador.php");
+require_once("DataAccessObject.php");
+require_once("../model/Administrador.php");
 /**
  * Created by PhpStorm.
  * User: Renard
@@ -23,11 +23,12 @@ class AdministradorDAO extends DataAccessObject{
     //toDo:Prevent SQL Injection
     public function getAdministrador($cpf){
         $administradores = array();
-        $query = "SELECT * FROM Administrador INNER JOIN Pessoa ON Administrador.cpf = Pessoa.cpf WHERE cpf = ".$cpf."";
+        $query = "SELECT * FROM Administrador INNER JOIN Pessoa ON Administrador.cpf = Pessoa.cpf WHERE Pessoa.cpf = ".$cpf."";
         $rows = parent::query($query);
         foreach($rows as $row){
             $administrador = new Administrador();
-            $administradores[] = $administrador->restoreFromPDOStatement($row);
+            $administrador->preenchePorArray($row);
+            $administradores[] = $administrador;
         }
         return $administradores[0];
     }
