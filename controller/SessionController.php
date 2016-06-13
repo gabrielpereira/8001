@@ -6,8 +6,8 @@
  * Time: 18:40
  */
 
-require_once("../model/Administrador.php");
-require_once("../model/Cliente.php");
+require_once(__DIR__."/../model/Administrador.php");
+require_once(__DIR__."../model/Cliente.php");
 
 class SessionController {
 
