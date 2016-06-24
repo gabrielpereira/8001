@@ -1,9 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gabriel Ramos
 
- */
 class Viagem {
     public $id;
     public $cpf_motorist;

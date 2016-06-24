@@ -20,7 +20,7 @@ $locais = $ViagemController->getViagemPor("id");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Auto Viação 8001</title>
+    <title>Auto Viação S.A.</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@ $locais = $ViagemController->getViagemPor("id");
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-bus"></i> <span>Auto Viação 8001</span></a>
+              <a href="dashboard.php" class="site_title"><i class="fa fa-bus"></i> <span>Auto Viação S.A.</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -51,7 +51,7 @@ $locais = $ViagemController->getViagemPor("id");
               </div>
               <div class="profile_info">
                 <span>Bem vindo,</span>
-                <h2><?php echo $_SESSION['nome'];?></h2>
+                <h2> </h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -62,85 +62,51 @@ $locais = $ViagemController->getViagemPor("id");
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                 <div class="menu_section" style="margin-top:90px;">
                     <ul class="nav side-menu">
-                        <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                            <ul class="nav child_menu">
-                                <li><a href="e_commerce.html">E-commerce</a></li>
-                                <li><a href="projects.html">Projects</a></li>
-                                <li><a href="project_detail.html">Project Detail</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
-                                <li><a href="profile.html">Profile</a></li>
-                            </ul>
-                        </li>
-                        <li><a><i class="fa fa-edit"></i> Meu perfil <span class="fa fa-chevron-down"></span></a>
-                            <ul class="nav child_menu">
-                                <li><a href="page_403.html">403 Error</a></li>
-                                <li><a href="page_404.html">404 Error</a></li>
-                                <li><a href="page_500.html">500 Error</a></li>
-                                <li><a href="plain_page.html">Plain Page</a></li>
-                                <li><a href="login.html">Login Page</a></li>
-                                <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        
                 </div>
               <div class="menu_section">
                 <h3>Administrar</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-user"></i> Clientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
+                      <li><a href="cliente.php">Informações</a></li>
+					  <li><a href="clienteinserir.php">Inserir Cliente</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-black-tie"></i> Motoristas <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">General Form</a></li>
-                      <li><a href="form_advanced.html">Advanced Components</a></li>
-                      <li><a href="form_validation.html">Form Validation</a></li>
-                      <li><a href="form_wizards.html">Form Wizard</a></li>
-                      <li><a href="form_upload.html">Form Upload</a></li>
-                      <li><a href="form_buttons.html">Form Buttons</a></li>
+                      <li><a href="motorista.php">Informações</a></li>
+					  <li><a href="motoristainserir.php">Inserir Motorista</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-truck"></i> Veículos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.html">General Elements</a></li>
-                      <li><a href="media_gallery.html">Media Gallery</a></li>
-                      <li><a href="typography.html">Typography</a></li>
-                      <li><a href="icons.html">Icons</a></li>
-                      <li><a href="glyphicons.html">Glyphicons</a></li>
-                      <li><a href="widgets.html">Widgets</a></li>
-                      <li><a href="invoice.html">Invoice</a></li>
-                      <li><a href="inbox.html">Inbox</a></li>
-                      <li><a href="calendar.html">Calendar</a></li>
+                      <li><a href="veiculos.php">Informações</a></li>
+                      <li><a href="inserirveiculos.php">Inserir Veículos</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-calendar"></i> Viagens <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
-                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                      <li><a href="viagem.php">Informações</a></li>
+                      <li><a href="inserirviagens.php">Inserir Viagens</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-ticket"></i> Bilhetes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Chart JS</a></li>
-                      <li><a href="chartjs2.html">Chart JS2</a></li>
-                      <li><a href="morisjs.html">Moris JS</a></li>
-                      <li><a href="echarts.html">ECharts</a></li>
-                      <li><a href="other_charts.html">Other Charts</a></li>
+                        <li><a href="bilhetes.php">Informações</a></li>
+                      <li><a href="inserirbilhetes.php">Inserir Bilhetes</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-map-signs"></i>Trechos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                      <li><a href="trechos.php">Informações</a></li>
+                      <li><a href="inserirtrecho.php">Inserir Trechos</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-map-marker"></i>Locais <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="locais.php">Editar Locais</a></li>
-                            <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                            <li><a href="locais.php">Informações</a></li>
+                            <li><a href="inserir_local.php">Inserir Local</a></li>
                         </ul>
                   </li>
                 </ul>
@@ -178,18 +144,15 @@ $locais = $ViagemController->getViagemPor("id");
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/user.png" alt="">Administrador
+                    <img src="images/user.png" alt="">Encerrar Sessão ?
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Perfil</a></li>
+  
                     <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
+                   
                     </li>
-                    <li><a href="javascript:;">Ajuda</a></li>
+      
                     <li><a href="../../logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
@@ -197,63 +160,7 @@ $locais = $ViagemController->getViagemPor("id");
                 <li role="presentation" class="dropdown">
                   <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
+                   
                       </div>
                     </li>
                   </ul>
@@ -265,11 +172,12 @@ $locais = $ViagemController->getViagemPor("id");
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
+        <!-- page content -->
+       <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Tablela de Locais <small>Terminais que nossa companhia opera.</small></h3>
+                <h3>Viagens <small></small></h3>
               </div>
 
               <div class="title_right">
@@ -290,7 +198,7 @@ $locais = $ViagemController->getViagemPor("id");
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Locais <small></small></h2>
+                    <h2>Viagens da nossa companhia.<small></small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>

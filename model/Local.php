@@ -1,9 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gabriel Ramos
 
- */
 class Local {
     public $cod;
     public $nome;

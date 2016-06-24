@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gabriel Ramos
-
- */
 
 class Veiculo {
     public $Placa;

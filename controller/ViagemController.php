@@ -1,9 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gabriel Ramos
 
- */
 require_once(__DIR__."/../data-access/ViagemDAO.php");
 require_once(__DIR__."/../model/viagem.php");
 

@@ -1,11 +1,6 @@
 <?php
 session_start();
-/**
- * Created by PhpStorm.
- * User: Renard
- * Date: 13/06/2016
- * Time: 05:06
- */
+
 function verificaCredenciais($papel_exigido){
     if(isset($_SESSION['papel'])){
         //atualiza a sessão
@@ -22,7 +17,7 @@ function verificaCredenciais($papel_exigido){
                 return FALSE;
         }
     }else{
-        header('Location: /8001/view/template/production/login.html');
+        header('Location: /view/template/production/dashboard2.php');
         exit;
     }
 }

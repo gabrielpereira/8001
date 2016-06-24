@@ -1,10 +1,6 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Gabriel Ramos
 
- */
  
 require_once("DataAccessObject.php");
 require_once(__DIR__."/../model/Local.php");

@@ -1,9 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gabriel Ramos
 
- */
 class Bilhete {
     public $id_viagem;
     public $poltrona;

@@ -30,6 +30,11 @@ class BilheteController{
     public function getBilhetePor($ordenacao){
         return self::$BilheteDAO->getBilhete($ordenacao);
     }
+	
+	public function getBilhetePor2($ordenacao){
+        return self::$BilheteDAO->getBilhete2($ordenacao);
+    }
+	
     public function inserirBilhete($cod, $nome, $cidade, $posicao_global){
         $local = new Bilhete(array($cod, $nome, $cidade, $posicao_global));
         self::$BilheteDAO->inserirBilhete($local);

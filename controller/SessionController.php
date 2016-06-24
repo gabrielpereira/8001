@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Renard
- * Date: 12/06/2016
- * Time: 18:40
- */
 
 require_once(__DIR__."/../model/Administrador.php");
 require_once(__DIR__."/../model/Cliente.php");

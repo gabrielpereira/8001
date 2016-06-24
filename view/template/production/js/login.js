@@ -1,6 +1,3 @@
-/**
- * Created by Renard on 12/06/2016.
- */
 
 function login(papel){
     var data = {};

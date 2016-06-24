@@ -1,9 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gabriel Ramos
-
- */
 
 
 require_once("DataAccessObject.php");
@@ -22,6 +17,19 @@ class BilheteDAO extends DataAccessObject{
         }
         return $locais;
     }
+	
+	    public function getBilhete2($order_by){
+        $locais = array();
+        $query = "SELECT * FROM Bilhete WHERE cpf = ''";
+        $rows = parent::retrieve($query, array());
+        foreach($rows as $row){
+            $local = new Bilhete();
+            $local->preenchePorArray($row);
+            $locais[] = $local;
+        }
+        return $locais;
+    }
+	
     public function inserirBilhete($local){
         $query = "INSERT INTO Bilhete (cod, nome, cidade, posicao_global) VALUES (".$local->cod.", ".$local->nome.", "
             .$local->cidade.", ".$local->posicao_global.")";
